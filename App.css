@@ -1,0 +1,691 @@
+
+/* =========================================
+   1. GLOBAL STYLES
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8faf9;
+  color: #173b35;
+  line-height: 1.6;
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================================
+   2. NAVIGATION BAR
+========================================= */
+
+.navbar {
+  min-height: 80px;
+  padding: 12px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: bold;
+  color: #173b35;
+}
+
+.logo span {
+  color: #159b75;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #294c43;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #159b75;
+}
+
+.login-btn {
+  background: #159b75;
+  color: white;
+  border: none;
+  padding: 12px 23px;
+  border-radius: 7px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #107c5d;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+
+.hero {
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 70px 9%;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 20, 18, 0.82),
+      rgba(8, 20, 18, 0.25)
+    ),
+    url('/mysore-palace.jpg.jpg') center/cover no-repeat;
+
+  color: white;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.tagline {
+  color: #159b75;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #55d6a5;
+}
+
+.hero h1 span {
+  color: #58d6a6;
+}
+
+.description {
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.explore-btn {
+  background: #159b75;
+  color: white;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 7px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #107c5d;
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   4. POPULAR DESTINATIONS
+========================================= */
+
+.destinations {
+  padding: 75px 9%;
+  background: #f8faf9;
+}
+
+.destinations h2 {
+  font-size: 35px;
+  margin-bottom: 35px;
+  color: #173b35;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  width: 100%;
+  margin-top: 25px;
+}
+
+
+/* =========================================
+   5. COMMON CARDS
+========================================= */
+
+.destination-card {
+  background: #ffffff;
+  border: 1px solid #e6eeea;
+  border-radius: 14px;
+  overflow: hidden;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+
+/* =========================================
+   6. ACTIVITY AND HOTEL IMAGES
+========================================= */
+
+.activity-image,
+.hotel-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+
+
+.destination-card:hover .activity-image,
+.destination-card:hover .hotel-image {
+  transform: scale(1.04);
+}
+
+/* Popular Destination Images */
+
+.destination-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.destination-card:hover .destination-image {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   7. CARD INFORMATION
+========================================= */
+
+.destination-info {
+  padding: 20px;
+  flex: 1;
+}
+
+.destination-info h3 {
+  font-size: 19px;
+  color: #173d35;
+  margin-bottom: 10px;
+}
+
+.destination-info p {
+  color: #68736f;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.destination-info span {
+  display: inline-block;
+  margin-top: 10px;
+  color: #16865e;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   8. FEATURES
+   Preserved for possible future use
+========================================= */
+
+.features {
+  padding: 50px 9%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.feature-box {
+  background: #e8f4ef;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.feature-box h2 {
+  margin-bottom: 15px;
+}
+
+.feature-box p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.feature-box button {
+  background: #159b75;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+}
+
+
+/* =========================================
+   9. RECOMMENDATION SECTION
+========================================= */
+
+.recommendation-section {
+  padding: 75px 9%;
+  background: #f0f7f3;
+}
+
+.recommendation-section > h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #173b35;
+}
+
+.recommendation-section > p:not(.tagline) {
+  color: #68736f;
+  margin-bottom: 20px;
+}
+
+.recommendation-section > h3 {
+  color: #176b53;
+  font-size: 23px;
+  margin-top: 45px;
+  margin-bottom: 15px;
+}
+
+
+/* =========================================
+   10. PLANNER FORM
+========================================= */
+
+.planner-form {
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto 0;
+  padding: 35px;
+  background: #ffffff;
+  border: 1px solid #e0ebe5;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.planner-form h3 {
+  color: #176b53;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.planner-form h3:not(:first-child) {
+  margin-top: 35px;
+}
+
+
+/* =========================================
+   11. INTEREST OPTIONS
+========================================= */
+
+.interest-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.interest-options label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 0;
+  padding: 13px 15px;
+  background: #f0f7f3;
+  border: 1px solid #dceae2;
+  border-radius: 8px;
+  color: #294c43;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.interest-options label:hover {
+  background: #e1f2e9;
+  border-color: #159b75;
+}
+
+.interest-options input {
+  width: 17px;
+  height: 17px;
+  accent-color: #159b75;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   12. TRAVEL PREFERENCES
+========================================= */
+
+.preference-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.preference-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #294c43;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.preference-grid input,
+.preference-grid select {
+  width: 100%;
+  padding: 13px 14px;
+  background: #f8faf9;
+  color: #173b35;
+  border: 1px solid #d5e2da;
+  border-radius: 7px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.preference-grid input:focus,
+.preference-grid select:focus {
+  border-color: #159b75;
+  box-shadow: 0 0 0 2px rgba(21, 155, 117, 0.1);
+}
+
+.preference-grid select option {
+  background: white;
+  color: #173b35;
+}
+
+
+/* =========================================
+   13. FIND RECOMMENDATIONS BUTTON
+========================================= */
+
+.planner-form > button {
+  width: 100%;
+  margin-top: 35px;
+  padding: 15px;
+  background: #159b75;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.planner-form > button:hover:not(:disabled) {
+  background: #107c5d;
+  transform: translateY(-2px);
+}
+
+.planner-form > button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   14. RECOMMENDATION RESULTS
+========================================= */
+
+#results {
+  background: #f8faf9;
+}
+
+#results > h3 {
+  color: #176b53;
+  border-bottom: 2px solid #dceae2;
+  padding-bottom: 10px;
+}
+
+#results .destination-grid {
+  margin-bottom: 35px;
+}
+
+/* Trip summary */
+
+#results > p:last-child {
+  margin-top: 40px;
+  padding: 20px;
+  background: #e8f4ef;
+  border-left: 4px solid #159b75;
+  border-radius: 7px;
+  color: #173b35;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   15. FOOTER
+========================================= */
+
+footer {
+  background: #123a32;
+  color: white;
+  padding: 40px 9%;
+  text-align: center;
+  line-height: 2;
+}
+
+footer h2 {
+  font-size: 27px;
+  margin-bottom: 5px;
+}
+
+footer p {
+  color: #c5ddd3;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   16. TABLET RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 12px 4%;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .interest-options {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .destinations,
+  .recommendation-section {
+    padding: 60px 6%;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+}
+
+
+/* =========================================
+   17. MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: auto;
+    min-height: 80px;
+    padding: 15px 5%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .hero {
+    min-height: 460px;
+    padding: 65px 7%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .destinations,
+  .recommendation-section {
+    padding: 50px 6%;
+  }
+
+  .destinations h2,
+  .recommendation-section > h2 {
+    font-size: 27px;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .activity-image,
+  .hotel-image {
+    height: 210px;
+  }
+
+  .planner-form {
+    padding: 23px 17px;
+  }
+
+  .interest-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .interest-options label {
+    padding: 11px 9px;
+    font-size: 13px;
+  }
+
+  .preference-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .recommendation-section > h3 {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================
+   18. SMALL MOBILE SCREENS
+========================================= */
+
+@media (max-width: 360px) {
+
+  .interest-options {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+}
+.food-preference {
+  margin: 20px 0;
+}
+
+.food-preference h3 {
+  margin-bottom: 12px;
+}
+
+.food-preference select {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  border: 1px solid #cbd5d1;
+  border-radius: 8px;
+  background: white;
+  color: #173b35;
+  font-size: 15px;
+  cursor: pointer;
+}
