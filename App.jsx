@@ -1,10 +1,6 @@
 
 import { useEffect, useState } from "react";
-import {
-  getDestinations,
-  getRecommendations,
-  getHotels
-} from "./api";
+import { getDestinations, getRecommendations, getHotels } from "./api";
 import "./App.css";
 
 const interestOptions = [
