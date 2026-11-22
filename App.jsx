@@ -4,7 +4,7 @@ import {
   getDestinations,
   getRecommendations,
   getHotels
-} from "./services/api";
+} from "./api";
 import "./App.css";
 
 const interestOptions = [
