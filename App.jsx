@@ -22,11 +22,32 @@ const destinationImages = {
 };
 
 // Get the correct image based on destination name
+
 const getDestinationImage = (place) => {
   const name = place.name?.trim().toLowerCase();
+  const category = place.category?.trim().toLowerCase();
 
-  return destinationImages[name] || place.image || "";
+  const categoryImages = {
+    "mysore palace": {
+      historical: "/historical/mysore-palace.avif",
+      architecture: "/architecture/mysore-palace.avif",
+    },
+    "chamundi hills": {
+      historical: "/historical/chamundi-hills.jpg",
+      nature: "/nature/chamundi-hills.jpg",
+    },
+    "st. philomena's church": {
+      historical: "/historical/St.-Philomenas-Cathedral.webp",
+      architecture: "/architecture/St.-Philomenas-Cathedral.webp",
+    },
+    "brindavan gardens": {
+      nature: "/nature/Brindavan-Gardens.jpg",
+    },
+  };
+
+  return categoryImages[name]?.[category] || place.image || "";
 };
+
 
 const activities = [
   // Historical
