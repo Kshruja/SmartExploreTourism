@@ -8,6 +8,8 @@ app = Flask(__name__)
 CORS(app)
 
 # Sample tourism destination database
+
+# Sample tourism destination database
 destinations = [
     {
         "id": 1,
@@ -16,7 +18,7 @@ destinations = [
         "location": "Mysuru",
         "budget": 100,
         "description": "Explore the magnificent royal palace of Mysuru.",
-        "image": "/destinations/mysore-palace.avif"
+        "image": "/historical/mysore-palace.avif"
     },
     {
         "id": 2,
@@ -25,7 +27,7 @@ destinations = [
         "location": "Mysuru",
         "budget": 50,
         "description": "Enjoy beautiful views of Mysuru.",
-        "image": "/destinations/chamundi-hills.jpg"
+        "image": "/nature/chamundi-hills.jpg"
     },
     {
         "id": 3,
@@ -34,7 +36,7 @@ destinations = [
         "location": "Mysuru",
         "budget": 100,
         "description": "Experience beautiful gardens and musical fountains.",
-        "image": "/destinations/Brindavan-Gardens.jpg"
+        "image": "/nature/Brindavan-Gardens.jpg"
     },
     {
         "id": 4,
@@ -43,9 +45,19 @@ destinations = [
         "location": "Mysuru",
         "budget": 0,
         "description": "Discover beautiful neo-Gothic architecture.",
-        "image": "/destinations/St.-Philomenas-Cathedral.webp"
+        "image": "/architecture/St.-Philomenas-Cathedral.webp"
+    },
+    {
+        "id": 5,
+        "name": "Mysore Palace",
+        "category": "Architecture",
+        "location": "Mysuru",
+        "budget": 100,
+        "description": "Admire the magnificent Indo-Saracenic architecture of Mysore Palace.",
+        "image": "/architecture/mysore-palace.avif"
     }
 ]
+
 
 
 #Hotel Database
